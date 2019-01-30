@@ -3,3 +3,4 @@ venv
 db.sqlite3
 selfmanager/__pycache__
 timemanager/migrations
+*.pyc
