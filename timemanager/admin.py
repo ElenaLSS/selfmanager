@@ -8,7 +8,10 @@ class SpecificTaskAdmin(admin.ModelAdmin):
 
 
 class WeekDayTimeAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('headline', 'day', 'time', 'time_length')
+
+    def headline(self, obj):
+        return obj.specific_task.headline
 
 
 admin.site.register(SpecificTask, SpecificTaskAdmin)
