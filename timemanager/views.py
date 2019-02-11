@@ -1,11 +1,4 @@
 from django.shortcuts import render
-<<<<<<< HEAD
-from django.http import HttpResponse
-
-
-def index(request):
-    return HttpResponse("Hello, world. You're at the polls index.")
-=======
 from django.http import Http404
 from django.http import HttpResponse
 from .models import SpecificTask, WeekDayTime
@@ -105,4 +98,4 @@ def get_year_week(year, week):
     return year_base + datetime.timedelta(days=(week-1) * 7)
 
 
->>>>>>> upstream/master
+

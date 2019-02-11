@@ -40,10 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'timemanager',
-<<<<<<< HEAD
-=======
-
->>>>>>> upstream/master
 ]
 
 MIDDLEWARE = [

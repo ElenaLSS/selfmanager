@@ -3,8 +3,7 @@ from django.contrib.auth.models import User
 from django.db import models
 # Create your models here.
 
-<<<<<<< HEAD
-=======
+
 
 class SpecificTask(models.Model):
     FAIL = 'fail'
@@ -36,4 +35,4 @@ class WeekDayTime(models.Model):
 
     def __str__(self):
         return self.specific_task.headline
->>>>>>> upstream/master
+
