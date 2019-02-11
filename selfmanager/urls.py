@@ -15,9 +15,16 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+<<<<<<< HEAD
 
 urlpatterns = [
 
     url(r'^timemanager/', include('timemanager.urls')),
     url(r'^admin/', admin.site.urls),
+=======
+from django.urls import include, path
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('timemanager/', include('timemanager.urls')),
+>>>>>>> upstream/master
 ]

@@ -14,7 +14,9 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static")
+]
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
@@ -38,6 +40,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'timemanager',
+<<<<<<< HEAD
+=======
+
+>>>>>>> upstream/master
 ]
 
 MIDDLEWARE = [
@@ -55,7 +61,7 @@ ROOT_URLCONF = 'selfmanager.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')]
+        'DIRS': [os.path.join(BASE_DIR, 'timemanager/templates')]
         ,
         'APP_DIRS': True,
         'OPTIONS': {
@@ -107,13 +113,18 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Shanghai'
 
 USE_I18N = True
 
-USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
+
+USE_L10N = False
+
+DATETIME_FORMAT = 'Y-m-d H:i:s'
+
+DATE_FORMAT = 'Y-m-d'
 
 
 # Static files (CSS, JavaScript, Images)
