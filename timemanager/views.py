@@ -6,9 +6,9 @@ import datetime
 
 # Create your views here.
 base_date = datetime.date(2019, 1, 7)
-
 # 0 表示6点
 # 0 表示周一
+
 
 def index(request):
     # 获得当前的日期
@@ -24,7 +24,7 @@ def index(request):
     context = {'week': week}
     user = request.user
     # 查询在当前周的任务
-    task_set = user.specifictask_set.all().filter(end_time__gte=week_base_plus_7)\
+    task_set = user.specifictask_set.all().filter(end_time__gte=week_base)\
         .filter(start_time__lte=week_base_plus_7)
 
     # ->对数据进行处理，产生用于渲染模板的数据
